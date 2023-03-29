@@ -22,6 +22,7 @@ class Solution:
                 return
 
             for i in range(m, n + 1):
+                # have to set this when incrementing, otherwise m value stays the same throughout call stack
                 m += 1
                 dfs(m, combo + [i])
 
