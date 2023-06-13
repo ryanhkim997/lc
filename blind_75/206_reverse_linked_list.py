@@ -13,7 +13,7 @@ class Solution:
 
         while curr:
             next = curr.next
-            curr = prev
+            curr.next = prev
             prev = curr
             curr = next
 
