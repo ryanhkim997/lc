@@ -11,7 +11,7 @@ class MyStack:
     def pop(self) -> int:
         len_q = len(self.q)
         for i in range(len_q):
-            popped = self.q.pop()
+            popped = self.q.popleft()
             if i != len_q - 1:
                 self.push(popped)
             else:
