@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def asteroidCollision(self, asteroids: List[int]) -> List[int]:
         # input: list of integers representing asteroids in a row
