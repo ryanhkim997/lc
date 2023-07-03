@@ -42,3 +42,22 @@ class Solution:
             count += 1
         
         return count
+
+
+# using DFS, iteratively
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if not root: return 0
+
+        maxDepth = 0
+        stack = [(root, 1)]
+        while stack:
+            curr, depth = stack.pop()
+            maxDepth = max(maxDepth, depth)
+
+            if curr.left:
+                stack.append((curr.left, depth + 1))
+            if curr.right:
+                stack.append((curr.right, depth + 1))
+        
+        return maxDepth
