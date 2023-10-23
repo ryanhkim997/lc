@@ -5,6 +5,7 @@
   "repository": "https://github.com/ryanhkim997/lc.git",
   "license": "MIT",
   "dependencies": {
+    "@types/react": "^18.2.31",
     "react": "^18.2.0"
   }
 }
