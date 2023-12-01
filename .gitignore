@@ -1,3 +1,4 @@
 *.conf
 *__pycache__*
 .pgpass
+*node_modules/*
