@@ -80,42 +80,48 @@ export default function Form() {
         handleSubmit(e);
       }}
     >
-      <Input
-        label="First Name"
-        value={fields.firstName}
-        setField={(firstName: string) =>
-          handleFieldChange("firstName", firstName)
-        }
-      />
-      {console.log(errors)}
-      {errors.firstName && <ErrorMsg message={errors.firstName} />}
-      <Input
-        label="Last Name"
-        value={fields.lastName}
-        setField={(lastName: string) => handleFieldChange("lastName", lastName)}
-      />
-      {errors.lastName && <ErrorMsg message={errors.lastName} />}
-      <Input
-        label="Email"
-        value={fields.email}
-        setField={(email: string) => handleFieldChange("email", email)}
-      />
-      {errors.email && <ErrorMsg message={errors.email} />}
-      <Input
-        label="Password"
-        value={fields.password}
-        setField={(password: string) => handleFieldChange("password", password)}
-      />
-      <Input
-        label="Confirm Password"
-        value={fields.confirmPassword}
-        setField={(confirmPassword: string) =>
-          handleFieldChange("confirmPassword", confirmPassword)
-        }
-      />
-      {errors.password && <ErrorMsg message={errors.password} />}
-      <input type="submit" value="Register"></input>
-      {success && <div>Form has been submitted successfully!</div>}
+      <>
+        <Input
+          label="First Name"
+          value={fields.firstName}
+          setField={(firstName: string) =>
+            handleFieldChange("firstName", firstName)
+          }
+        />
+        {console.log(errors)}
+        {errors.firstName && <ErrorMsg message={errors.firstName} />}
+        <Input
+          label="Last Name"
+          value={fields.lastName}
+          setField={(lastName: string) =>
+            handleFieldChange("lastName", lastName)
+          }
+        />
+        {errors.lastName && <ErrorMsg message={errors.lastName} />}
+        <Input
+          label="Email"
+          value={fields.email}
+          setField={(email: string) => handleFieldChange("email", email)}
+        />
+        {errors.email && <ErrorMsg message={errors.email} />}
+        <Input
+          label="Password"
+          value={fields.password}
+          setField={(password: string) =>
+            handleFieldChange("password", password)
+          }
+        />
+        <Input
+          label="Confirm Password"
+          value={fields.confirmPassword}
+          setField={(confirmPassword: string) =>
+            handleFieldChange("confirmPassword", confirmPassword)
+          }
+        />
+        {errors.password && <ErrorMsg message={errors.password} />}
+        <input type="submit" value="Register"></input>
+        {success && <div>Form has been submitted successfully!</div>}
+      </>
     </form>
   );
 }
