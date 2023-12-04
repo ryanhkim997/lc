@@ -4,7 +4,7 @@ import "./style.css";
 
 export default function MultipleFilters() {
   const [items, setItems] = useState(defaultItems);
-  const [activeFilters, setActiveFilters] = useState([]);
+  const [activeFilters, setActiveFilters] = useState<any[]>([]);
 
   function handleClick(filter) {
     if (activeFilters.includes(filter)) {
@@ -19,7 +19,7 @@ export default function MultipleFilters() {
     if (activeFilters.length < 1) {
       setItems(defaultItems);
     } else {
-      const filteredItems = [];
+      const filteredItems: any[] = [];
       activeFilters.forEach((filter) => {
         defaultItems.forEach((item) => {
           if (item.category === filter) {
